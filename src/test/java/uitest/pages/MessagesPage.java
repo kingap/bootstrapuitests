@@ -10,7 +10,7 @@ import uitest.commands.SeleniumCommands;
 public class MessagesPage {
     private final WebDriver driver;
 
-    @FindBy(linkText = "Logout")
+    @FindBy(css = "#logoutLink")
     private WebElement logoutLink;
 
     public MessagesPage(WebDriver driver) {
@@ -25,7 +25,7 @@ public class MessagesPage {
 
     public boolean isUserLogged() throws Exception {
         try {
-            driver.findElement(By.linkText("Logout"));
+            driver.findElement(By.cssSelector("#logoutLink"));
             return true;
         } catch (NoSuchElementException e) {
             return false;

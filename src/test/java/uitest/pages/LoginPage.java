@@ -26,7 +26,6 @@ public class LoginPage {
     }
 
     public void login(String login, String password) throws Exception {
-        sc.waitForElementVisible(loginField);
         loginField.sendKeys(login);
         passwordField.sendKeys(password);
         loginButton.click();

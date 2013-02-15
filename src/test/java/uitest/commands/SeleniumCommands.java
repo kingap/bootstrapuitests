@@ -27,7 +27,7 @@ public class SeleniumCommands {
     }
 
     public void waitForFinishLoading() throws Exception {
-        wait.until(isElementNotVisible(By.id("ajaxthrobber")));
+        wait.until(isElementNotVisible(By.cssSelector("#ajaxthrobber")));
     }
 
     public void waitForElementClickable(By locator) {
