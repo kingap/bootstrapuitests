@@ -30,11 +30,11 @@ public class LoginPage {
         loginField.sendKeys(login);
         passwordField.sendKeys(password);
         loginButton.click();
-        SeleniumCommands sc = new SeleniumCommands(driver);
         sc.waitForFinishLoading();
     }
 
     public void openLoginPage() throws Exception {
         driver.get("http://bootstrap.softwaremill.com/#/login");
+        sc.waitForFinishLoading();
     }
 }
