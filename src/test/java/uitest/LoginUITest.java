@@ -20,10 +20,6 @@ public class LoginUITest {
 
     @Test(enabled = true)
     public void testLogin() throws Exception {
-        FirefoxProfile profile = new ProfilesIni().getProfile("ff17");
-        DesiredCapabilities dc = DesiredCapabilities.firefox();
-        dc.setCapability(FirefoxDriver.PROFILE, profile);
-
         WebDriver driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 

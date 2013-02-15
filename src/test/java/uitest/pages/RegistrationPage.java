@@ -1,21 +1,9 @@
 package uitest.pages;
 
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.util.NoSuchElementException;
-import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.By;
 import uitest.commands.SeleniumCommands;
-
-import static uitest.commands.SeleniumCommands.*;
 
 public class RegistrationPage {
 

@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import uitest.commands.SeleniumCommands;
-import uitest.commands.SeleniumCommands.*;
 
 
 public class LoginPage {
