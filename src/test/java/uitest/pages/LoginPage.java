@@ -11,10 +11,10 @@ public class LoginPage {
     private final WebDriver driver;
     SeleniumCommands sc;
 
-    @FindBy(id = "login")
+    @FindBy(css = "#login")
     private WebElement loginField;
 
-    @FindBy(id = "password")
+    @FindBy(css = "#password")
     private WebElement passwordField;
 
     @FindBy(css = "button[type=submit]")

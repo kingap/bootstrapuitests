@@ -25,10 +25,12 @@ public class RegisterUITest{
         RegistrationPage registrationPage = PageFactory.initElements(driver, RegistrationPage.class);
         registrationPage.register(LOGIN, EMAIL, PASSWORD);
 
+        MessagesPage messagesPage = PageFactory.initElements(driver, MessagesPage.class);
+        assertThat(messagesPage.getInfoText()).contains("User registered successfully");
+
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
         loginPage.openLoginPage();
         loginPage.login(LOGIN, PASSWORD);
-        MessagesPage messagesPage = PageFactory.initElements(driver, MessagesPage.class);
         assertThat(messagesPage.isUserLogged()).isTrue();
     }
 }

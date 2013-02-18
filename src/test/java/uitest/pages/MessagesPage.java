@@ -9,12 +9,17 @@ import uitest.commands.SeleniumCommands;
 
 public class MessagesPage {
     private final WebDriver driver;
+    SeleniumCommands sc;
 
     @FindBy(css = "#logoutLink")
     private WebElement logoutLink;
 
+    @FindBy(css = ".alert-info")
+    private WebElement alert;
+
     public MessagesPage(WebDriver driver) {
         this.driver = driver;
+        sc = new SeleniumCommands(driver);
     }
 
     public void logout() throws Exception {
@@ -30,5 +35,10 @@ public class MessagesPage {
         } catch (NoSuchElementException e) {
             return false;
         }
+    }
+
+    public String getInfoText() {
+       sc.waitForElementVisible(alert);
+       return alert.getText();
     }
 }

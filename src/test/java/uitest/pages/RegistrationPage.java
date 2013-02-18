@@ -10,16 +10,16 @@ public class RegistrationPage {
     private final WebDriver driver;
     SeleniumCommands sc;
 
-    @FindBy(id = "login")
+    @FindBy(css = "#login")
     private WebElement loginField;
 
-    @FindBy(id = "email")
+    @FindBy(css = "#email")
     private WebElement emailField;
 
-    @FindBy(id = "password")
+    @FindBy(css = "#password")
     private WebElement passwordField;
 
-    @FindBy(id = "repeatPassword")
+    @FindBy(css = "#repeatPassword")
     private WebElement repeatPassField;
 
     @FindBy(css = "button[type=submit]")
